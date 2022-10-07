@@ -1,0 +1,9 @@
+docker run -itd --name mysqldb -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql
+docker exec -it mysqldb bash
+mysql -u root -proot
+create database student_grading_database;
+use student_grading_database;
+create table students_login_info(id int primary key, password varchar(16) not null);
+create table students_grades(id int primary key, math int not null, english int not null, physics int not null, history int not null);
+insert into students_login_info(id, password) values(1, 123456), (2, 234567), (3, 345678);
+insert into students_grades values (1, 100, 98, 88, 70), (2, 99, 98, 97, 96), (3, 70, 71, 72, 80);
