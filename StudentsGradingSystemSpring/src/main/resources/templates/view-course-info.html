@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Info</title>
+</head>
+<body>
+<p>
+  Course info:
+</p>
+<p>
+<li th:each="type : ${courseInfo.keySet()}" th:text="${type} + ' : ' + ${courseInfo.get(type)}"></li>
+</p>
+<p>
+  <a href="request-list">Requests Page</a>
+</p>
+<p>
+  <a href="home">Home page (Logout)</a>
+</p>
+</body>
+</html>

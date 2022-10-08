@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org" content-type="application/x-www-form-urlencoded">
+<head>
+  <title>Add Weather Entry</title>
+</head>
+<body>
+<main style="font-size: large; text-align: left">
+  <p>
+    Enter your credentials:)
+  </p>
+  <form th:action="@{/login}" method="post" th:object="${student}" autocomplete="off">
+    <p>
+      <label>
+        Username:
+        <input th:field="*{id}" autocomplete="off" type="number">
+      </label>
+    </p>
+    <p>
+      <label>
+        Password:
+        <input th:field="*{password}" autocomplete="off" type="password">
+      </label>
+    </p>
+    <p>
+      <input type="submit" value="Login" />
+    </p>
+  </form>
+  <button onclick="location.href = '/home';" id="0" class="float-left submit-button" >Home Page</button>
+</main>
+</body>
+</html>

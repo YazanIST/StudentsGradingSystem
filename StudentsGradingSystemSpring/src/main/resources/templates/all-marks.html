@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All marks</title>
+</head>
+<body>
+<p>
+  All marks:
+</p>
+
+<p>
+<li th:each="course : ${marks.keySet()}" th:text="${course} + ' : ' + ${marks.get(course)}"></li>
+</p>
+<p>
+  <a href="request-list">Requests Page</a>
+</p>
+<p>
+  <a href="home">Home page (Logout)</a>
+</p>
+</body>
+</html>

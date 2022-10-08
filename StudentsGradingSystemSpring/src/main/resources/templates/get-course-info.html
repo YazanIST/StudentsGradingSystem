@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All marks</title>
+</head>
+<body>
+<p>
+    All courses:
+</p>
+<p>
+<li th:each="course : ${allCourses}" th:text="${course}"></li>
+</p>
+<p>
+<form th:action="@{/course-info}" th:object="${course}" method="post" autocomplete="off">
+    <p>
+        <label>
+            Course:
+            <input type="text" th:field="*{name}"/>
+<!--            <input th:value="*{courseName}" autocomplete="off" type="text">-->
+        </label>
+    </p>
+    <p>
+        <input type="submit" value="Pick" />
+    </p>
+</form>
+</p>
+<p>
+    <a href="request-list">Requests Page</a>
+</p>
+<p>
+    <a href="home">Home page (Logout)</a>
+</p>
+</body>
+</html>
